@@ -5,54 +5,80 @@ import axios from 'axios';
 import '../App.css'
 import '../utils/constant'
 import { url } from '../utils/constant';
+import { getDefaultNormalizer } from '@testing-library/react';
 
 const GetAll = () => {
 
 
-    const [apiData, setapiData] = useState('')
+    const [apiData, setapiData] = useState([])
 
-    useEffect(()=>{
+    const onDelete=(id)=>{
+        console.log(id);
+        axios.delete(`http://localhost:4300/tasks/`+id).then(res=>{
+            console.log("get");
+            getData()
+        }
+
+        )
+
+    }
+
+    const getData=()=>{
         axios.get(`http://localhost:4300/tasks`).then(
             res=>{
                 console.log("GET ALL");
+                console.log(res.data);
                 console.log(res);
+                setapiData(res.data);
             }
         )
-    }
 
-    )
+        }
+
+    useEffect(()=>{
+    getData()
+    },[])
+
+
+
 
 
     return <>
         <section className="getlist">
 
             <ul >
-                <li>
 
-                    <div className="note-card">
-                        <div className="note-id">
-                            id
+            {apiData.map((data)=><li key={data.id}>
 
-                        </div>
-                        <div className="note-content">
-                            <div className="card-title">
-                                <h2> Git</h2>
 
-                            </div>
+            <div className="note-card">
+                    <div className="note-id">
+                    {data.id}
 
-                            <div>
-                                Discription
-                            </div>
-                            <button className="card-button">
-                                Edit
-                            </button>
-                            <button className="card-button">
-                                Delete
-                            </button>
-                        </div>
                     </div>
+                    <div className="note-content">
+                        <div className="card-title">
+                            <h2>  {data.title}</h2>
 
-                </li>
+                        </div>
+
+                        <div>
+                        {data.description}
+                        </div>
+                        <button className="card-button">
+                            Edit
+                        </button>
+                        <button className="card-button" onClick={()=>onDelete(data.id)}>
+                            Delete
+                        </button>
+                    </div>
+                </div>
+            
+            </li>)
+
+            }
+
+
             </ul>
 
         </section>

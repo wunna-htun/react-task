@@ -23,49 +23,19 @@
       "description": "typicode"
     },
     {
-      "title": "task-2",
-      "description": "typicode",
-      "id": 2
-    },
-    {
-      "title": "task-3",
-      "description": "typicode",
-      "id": 3
-    },
-    {
-      "title": "task-3",
-      "description": "typicode",
-      "id": 4
-    },
-    {
-      "title": "dfdf",
-      "description": "fdf",
-      "id": 5
-    },
-    {
-      "title": "",
-      "description": "",
-      "id": 6
-    },
-    {
-      "title": "",
-      "description": "",
-      "id": 7
-    },
-    {
-      "title": "",
-      "description": "",
-      "id": 8
-    },
-    {
-      "title": "",
-      "description": "",
-      "id": 9
-    },
-    {
       "title": "eat",
       "description": "eat",
       "id": 10
+    },
+    {
+      "title": "eating",
+      "description": "lunch",
+      "id": 11
+    },
+    {
+      "title": "play game",
+      "description": "mobiel",
+      "id": 12
     }
   ]
 }

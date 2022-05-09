@@ -24,11 +24,6 @@ const Create = () => {
 
         )
 
-
-        axios.get(`http://localhost:4300/tasks`).then(res=>{
-            console.log("get ");
-            console.log(res);
-        })
     }
 
 
