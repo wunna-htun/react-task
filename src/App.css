@@ -45,9 +45,11 @@ nav .logo img{
   width: 2rem;
   height: 2rem;
 }
-nav .header{
+nav .header,a{
   flex-grow: 4;
   font-size: larger;
+  color: var(--baby-powder);
+  text-decoration: none;
   
 }
 
@@ -180,3 +182,58 @@ background-color: lightblue;
 
 
 /* get form */
+
+
+/* update card */
+
+
+.updatecard{
+
+  background-color: var(--baby-powder);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.updateForm{
+  padding: 1rem;
+  background-color:var(--jet);
+  color: var(--baby-powder);
+  width: 50vh;
+  height: 50vh;
+  line-height:3;
+}
+
+.form-title{
+  font-weight: bold;
+  text-align: center;
+}
+
+.updateForm form,input{
+  display: block;
+  /* background-color: red; */
+}
+
+.updateForm input{
+  width: 100%;
+  padding: 1rem 0 1rem 0;
+}
+
+
+
+.updateForm button{
+
+  margin: 3rem 1rem 0.5rem 0;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  background-color: var(--tart-orange);
+  color: var(--baby-powder);
+  border: none;
+  border-radius: 10px;
+}
+
+
+
+/* update card */

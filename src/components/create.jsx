@@ -5,10 +5,12 @@ import '../utils/constant'
 import { url } from '../utils/constant';
 
 
+
 const Create = () => {
 
     const [title, settitle] = useState('');
     const [description, setdescription] = useState('')
+    
     const postData=()=>{
         console.log("click");
         console.log(title);

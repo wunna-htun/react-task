@@ -6,11 +6,13 @@ import '../App.css'
 import '../utils/constant'
 import { url } from '../utils/constant';
 import { getDefaultNormalizer } from '@testing-library/react';
+import { useNavigate } from "react-router-dom";
 
 const GetAll = () => {
 
 
     const [apiData, setapiData] = useState([])
+    let navigate = useNavigate();
 
     const onDelete=(id)=>{
         console.log(id);
@@ -21,6 +23,12 @@ const GetAll = () => {
 
         )
 
+    }
+
+    const onUpdate=(id)=>{
+        console.log("to Update page",id);
+        localStorage.setItem('id',id)
+        navigate("/update");
     }
 
     const getData=()=>{
@@ -65,7 +73,7 @@ const GetAll = () => {
                         <div>
                         {data.description}
                         </div>
-                        <button className="card-button">
+                        <button className="card-button" onClick={()=>onUpdate(data.id)}>
                             Edit
                         </button>
                         <button className="card-button" onClick={()=>onDelete(data.id)}>
